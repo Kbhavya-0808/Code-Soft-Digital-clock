@@ -1,0 +1,64 @@
+/* Reset some basic elements */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #330066, #ff1493); /* Gradient from dark blue to pink */
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.hero {
+    text-align: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+}
+
+.clock {
+    font-size: 3em;
+    line-height: 1.2;
+}
+
+#day, #date {
+    display: inline;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#date {
+    margin-right: 10px; /* Add a margin between date and day */
+}
+
+#hrs, #min, #sec {
+    font-size: 3em;
+    margin: 0 5px;
+}
+
+.watch-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+    background: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.watch-link:hover {
+    background: #0056b3;
+}

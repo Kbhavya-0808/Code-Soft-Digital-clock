@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock Using JavaScript - Easy Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="hero">
+    <div class="container">
+        <div class="clock">
+            <span id="day">Sunday</span>, 
+            <span id="date">01/01/1970</span>
+            <br>
+            <span id="hrs">00</span>
+            <span>:</span>
+            <span id="min">00</span>
+            <span>:</span>
+            <span id="sec">00</span>
+        </div>
+    </div>
+</div>
+
+<script>
+let hrs = document.getElementById("hrs");
+let min = document.getElementById("min");
+let sec = document.getElementById("sec");
+let day = document.getElementById("day");
+let date = document.getElementById("date");
+
+const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+setInterval(()=>{
+    let currentTime = new Date();
+
+    hrs.innerHTML = (currentTime.getHours()<10?"0":"") + currentTime.getHours();
+    min.innerHTML = (currentTime.getMinutes()<10?"0":"") + currentTime.getMinutes();
+    sec.innerHTML = (currentTime.getSeconds()<10?"0":"") + currentTime.getSeconds();
+    
+    day.innerHTML = daysOfWeek[currentTime.getDay()];
+    date.innerHTML = (currentTime.getDate()<10?"0":"") + currentTime.getDate() + "/"
+                     + ((currentTime.getMonth()+1)<10?"0":"") + (currentTime.getMonth()+1) + "/"
+                     + currentTime.getFullYear();
+}, 1000);
+</script>
+
+</body>
+</html>
