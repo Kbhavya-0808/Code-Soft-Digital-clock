@@ -1,1 +1,1 @@
-# Code-Soft-Digital-clock
+# CodeSoft-Digital-clock
